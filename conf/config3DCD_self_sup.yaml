@@ -1,0 +1,30 @@
+defaults: # for loading the default.yaml config
+  - task: change_detection
+    optional: True
+  - model_type: 3DCDkpconv_contrastive #3DCDkpconv_contrastive
+    optional: True
+  - dataset: Urb3DSimulPair_3DCD_self_sup #H3DPair_3DCD_self_sup #Urb3DSimulPair_3DCD_self_sup #AHNPair_3DCD_self_sup
+    optional: True
+
+  - visualization: default
+  - lr_scheduler: exponential
+  - training: 3DCD_kpconv_contrastive #kpconv
+#
+  - debugging: default
+  - models: ${defaults.0.task}/${defaults.1.model_type}
+  - data: ${defaults.0.task}/${defaults.2.dataset}
+#  - sota # Contains current SOTA results on different datasets (extracted from papers !).
+#  - hydra/job_logging: custom
+#  - hydra/output: custom  # add the support for user-defined experiment folder (where to save the experiment files)
+
+job_name: kpconv_contrastive-${now:%Y-%m-%d} # prefix name for saving the experiment file.
+model_name: KPConv_contrastive #PointNet #KPConvPaper # Name of the specific model to load
+update_lr_scheduler_on: "on_epoch" # ["on_epoch", "on_num_batch", "on_num_sample"]
+selection_stage: ""
+pretty_print: False
+eval_frequency: 1
+
+tracker_options: # Extra options for the tracker
+  full_res: False
+  make_submission: False
+  track_boxes: False

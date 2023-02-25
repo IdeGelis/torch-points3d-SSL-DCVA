@@ -1,0 +1,36 @@
+defaults: # for loading the default config
+  - task: change_detection # Task performed (segmentation, classification etc...)
+    optional: True
+  - model_type: dcva_3d #siamesekpconv_unshared #kpconv # Type of model to use, e.g. pointnet2, rsconv etc...
+    optional: True
+  - dataset: Urb3DSimulPairJZ2 # AHN: AHNPair Urb3DDS: Urb3DSimulPair LETG: LETGCliffs SHREC21: Shrec21Pair #Urb3DCD_cls: Urb3DCDPair_cls H3D: H3DPair
+    optional: True
+
+#  - visualization: default
+  - lr_scheduler: exponential
+  - training: defaultUrb3D3
+
+  - debugging: default.yaml
+  - models: ${defaults.0.task}/${defaults.1.model_type}
+  - data: ${defaults.0.task}/${defaults.2.dataset}
+#  - sota # Contains current SOTA results on different datasets (extracted from papers !).
+  - hydra/job_logging: custom
+  - hydra/output: custom  # add the support for user-defined experiment folder (where to save the experiment files)
+
+perform_annex_task: False
+compute_thresholds: True
+nb_thresholds: 1
+
+
+job_name: Urb3DCD-DCVA-Train-${now:%Y-%m-%d} # prefix name for saving the experiment file.
+model_name: DCVA_3D #SiameseKPConvUnshared # Name of the specific model to load
+update_lr_scheduler_on: "on_epoch" # ["on_epoch", "on_num_batch", "on_num_sample"]
+selection_stage: ""
+pretty_print: True
+
+
+tracker_options: # Extra options for the tracker
+  full_pc: True
+  full_res: True
+  make_submission: False
+  track_boxes: False
