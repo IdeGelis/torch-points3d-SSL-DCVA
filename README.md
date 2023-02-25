@@ -1,12 +1,17 @@
-# Siamese KPConv: 3D multiple change detection from raw point clouds using deep learning
-Iris de Gélis, Sébastien Lefèvre and Thomas Corpetti (ISPRS Journal, 2023)
+# Deep unsupervised 3D point clouds change detection
+Iris de Gélis, Sébastien Lefèvre and Thomas Corpetti (Submitted to the International Journal of Applied Earth Observation and Geoinformation, 2023)
 
-This Git project is a fork from Torch-Point3D depository to share code for Siamese KPConv and Siamese KPConv Cls networks for 3D point clouds change segmentation and classification respectively. See our paper:
+This Git project is a fork from Torch-Point3D depository to share code for SSL-DCVA and TL-DCVA networks for 3D point clouds change segmentation. See our up-comming paper for more details.
 
+General methodology:
 <p align="center">
-   <img src="docs/imgs/SiamKPConv.png" >      
+   <img src="docs/imgs/DCVAgal.png" >      
 </p>
 
+Self-supervised learning training:
+<p align="center">
+   <img src="docs/imgs/SSL_schema.png" >      
+</p>
 
 <p align="center">
   <img width="40%" src="https://raw.githubusercontent.com/nicolas-chaulet/torch-points3d/master/docs/logo.png" />
