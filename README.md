@@ -1,5 +1,5 @@
 # Deep unsupervised 3D point clouds change detection
-Iris de Gélis, Sébastien Lefèvre and Thomas Corpetti (Submitted to the International Journal of Applied Earth Observation and Geoinformation, 2023)
+Iris de Gélis, Sébastien Lefèvre and Thomas Corpetti (Submitted to the ISPRS Open Journal of Photogrammetry and Remote Sensing, 2023)
 
 This Git project is a fork from Torch-Point3D depository to share code for SSL-DCVA and TL-DCVA networks for 3D point clouds change segmentation. See our up-comming paper for more details.
 
