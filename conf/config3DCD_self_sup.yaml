@@ -3,7 +3,7 @@ defaults: # for loading the default.yaml config
     optional: True
   - model_type: 3DCDkpconv_contrastive #3DCDkpconv_contrastive
     optional: True
-  - dataset: Urb3DSimulPair_3DCD_self_sup #H3DPair_3DCD_self_sup #Urb3DSimulPair_3DCD_self_sup #AHNPair_3DCD_self_sup
+  - dataset: AHNPair_3DCD_self_sup #H3DPair_3DCD_self_sup #Urb3DSimulPair_3DCD_self_sup #AHNPair_3DCD_self_sup
     optional: True
 
   - visualization: default

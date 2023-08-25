@@ -6,9 +6,9 @@ data:
 #  dataValFile:   /gpfswork/rech/rin/utf14pr/dataset/Urb3DSimul/IEEE_Dataset_V2/1-Lidar05/Val/ #/gpfswork/rech/rin/utf14pr/dataset/Urb3DSimul/IEEE_Dataset_V1/5-MultiSensor/Val/ #
   dataTestFile:  /gpfswork/rech/rin/utf14pr/dataset/Urb3DSimul/IEEE_Dataset_V2/1-Lidar05/Test/ #/gpfswork/rech/rin/utf14pr/dataset/Urb3DSimul/IEEE_Dataset_V1/5-MultiSensor/Train/ #
   dataroot: data
-  preprocessed_dir: /gpfswork/rech/rin/utf14pr/dev/torch-points3d/data/${data.dataset_name}/Lid05-ssl2/ #/gpfswork/rech/rin/utf14pr/dev/torch-points3d/data/${data.dataset_name}/5-MultiSensor/ #
+  preprocessed_dir: /gpfswork/rech/rin/utf14pr/dev/torch-points3d/data/${data.dataset_name}/Lid05-ssl2/
   proportionTrainDS: 0 #0.8 # Set to None if just reading Train and Val ds files
-  nameInPly: "params" # IEEE V1 : "Urb3DSimul" / IEEE V2:"Params"
+  nameInPly: "params" # IEEE V1 : "Urb3DSimul" / IEEE V2:"params"
   first_subsampling: 1 #0.05 # Grid size of the input data
   use_category: False # Use object category information
   radius: 50

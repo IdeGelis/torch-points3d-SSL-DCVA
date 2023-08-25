@@ -12,7 +12,7 @@ from torch_points3d.datasets.change_detection.AHNPairCylinder import AHNCylinder
 from torch_points3d.datasets.change_detection.base_siamese_dataset import BaseSiameseDataset
 from torch_points3d.metrics.contrastiveselfsup_tracker import selfsup_tracker
 from torch_points3d.datasets.change_detection.pair import Pair, MultiScalePair
-from torch_points3d.datasets.change_detection.Urb3DSimulPairCylinder import cloud_loader
+# from torch_points3d.datasets.change_detection.Urb3DSimulPairCylinder import cloud_loader
 
 
 OBJECT_COLOR = np.asarray(

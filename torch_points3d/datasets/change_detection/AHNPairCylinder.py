@@ -100,9 +100,9 @@ class AHN(Dataset):
             if dir.is_dir():
                 curDir = os.scandir(dir)
                 for f in curDir:
-                    if "AHN3" in f.name and "ply" in f.name: #and not "feature" in f.name:
+                    if "AHN3" in f.name and "ply" in f.name and not "feature" in f.name:
                         self.filesPC0.append(f.path)
-                    elif "AHN4" in f.name and "ply" in f.name: #and not "feature" in f.name:
+                    elif "AHN4" in f.name and "ply" in f.name and not "feature" in f.name:
                         self.filesPC1.append(f.path)
                 curDir.close()
         globPath.close()
