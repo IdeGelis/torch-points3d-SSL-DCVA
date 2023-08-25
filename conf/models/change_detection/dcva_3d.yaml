@@ -2,8 +2,8 @@ models:
   DCVA_3D:
     class: dcva_3d.DCVA_3D
     pretrained_model:
-      model_name: KPConvPaper #KPConv_contrastive #PointNet #KPConvPaper
-      path_pretrained_model: "/gpfswork/rech/rin/utf14pr/dev/torch-points3d-svg290822/outputs/2022-05-18/09-59-29/" #/share/projects/deep3dt/models_pretrained/sem_seg_tp3d/KPFCNN/17-40-10/" #"/gpfswork/rech/rin/utf14pr/dev/torch-points3d/outputs/2022-05-17/12-20-47/" #"/2022-05-06/18-04-19/" #"/2022-04-15/10-07-49/"
-      weight_name: "miou" #"latest" miou
-    layer_for_dcva: 7
+      model_name: KPConv_contrastive #KPConv_contrastive #PointNet #KPConvPaper
+      path_pretrained_model: "/share/castor/home/degelis/dev/published/SiamKPConv/torch-points3d-SSL-DCVA/outputs/2023-08-25/10-50-24/epoch15/" #/share/projects/deep3dt/models_pretrained/sem_seg_tp3d/KPFCNN/17-40-10/" #"/gpfswork/rech/rin/utf14pr/dev/torch-points3d/outputs/2022-05-17/12-20-47/" #"/2022-05-06/18-04-19/" #"/2022-04-15/10-07-49/"
+      weight_name: "latest" #"latest" miou
+    layer_for_dcva: 8
     knn: 1

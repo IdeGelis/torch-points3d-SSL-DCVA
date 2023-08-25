@@ -19,8 +19,6 @@ from torch_points3d.datasets.segmentation import IGNORE_LABEL
 from torch_points3d.datasets.change_detection.pair import PairBatch, PairMultiScaleBatch
 
 
-import torch_points3d.models.segmentation.pointnet_yanx27 as pointnet
-
 def dist(pt1, pt2):
     return torch.sqrt((pt1[0]-pt2[0])**2 + (pt1[1]-pt2[1])**2 + (pt1[2]-pt2[2])**2)
 

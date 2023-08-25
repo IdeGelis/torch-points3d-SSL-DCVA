@@ -3,12 +3,12 @@ defaults: # for loading the default config
     optional: True
   - model_type: dcva_3d #siamesekpconv_unshared #kpconv # Type of model to use, e.g. pointnet2, rsconv etc...
     optional: True
-  - dataset: Urb3DSimulPairJZ2 # AHN: AHNPair Urb3DDS: Urb3DSimulPair LETG: LETGCliffs SHREC21: Shrec21Pair #Urb3DCD_cls: Urb3DCDPair_cls H3D: H3DPair
+  - dataset: AHNPair # AHN: AHNPair Urb3DDS: Urb3DSimulPair  H3D: H3DPair
     optional: True
 
 #  - visualization: default
   - lr_scheduler: exponential
-  - training: defaultUrb3D3
+  - training: defaultUrb3D
 
   - debugging: default.yaml
   - models: ${defaults.0.task}/${defaults.1.model_type}
@@ -22,8 +22,8 @@ compute_thresholds: True
 nb_thresholds: 1
 
 
-job_name: Urb3DCD-DCVA-Train-${now:%Y-%m-%d} # prefix name for saving the experiment file.
-model_name: DCVA_3D #SiameseKPConvUnshared # Name of the specific model to load
+job_name: AHN-DCVA-Train-${now:%Y-%m-%d} # prefix name for saving the experiment file.
+model_name: DCVA_3D # Name of the specific model to load
 update_lr_scheduler_on: "on_epoch" # ["on_epoch", "on_num_batch", "on_num_sample"]
 selection_stage: ""
 pretty_print: True

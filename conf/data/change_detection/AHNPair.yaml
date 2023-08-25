@@ -1,15 +1,15 @@
 data:
-  class: AHNPairCylinder_dcva.AHNDataset_dcva
+  class: AHN_dcva.AHNDataset_DCVA
   dataset_name: "AHN"
   task: change_detection
-  dataTrainFile: /gpfswork/rech/rin/utf14pr/dataset/AHN/DS_4Classes_Divided2_forRF/Train-tiny/ #/gpfswork/rech/rin/utf14pr/dataset/AHN/DS_4Classes_new_Divided/
-  dataValFile: /gpfswork/rech/rin/utf14pr/dataset/AHN/DS_4Classes_Divided2_forRF/Val/ #/share/projects/deep3dt/datasets/AHN/DS_4Classes_new_Divided/Val/ #
-  dataTestFile: /gpfswork/rech/rin/utf14pr/dataset/AHN/CleanManually/ #37EN1_08_full/ #CleanManually/ #/share/projects/deep3dt/datasets/AHN/DS_4Classes_new_Divided/Test/ #
+#  dataTrainFile: /gpfswork/rech/rin/utf14pr/dataset/AHN/DS_4Classes_Divided2_forRF/Train-tiny/ #/gpfswork/rech/rin/utf14pr/dataset/AHN/DS_4Classes_new_Divided/
+#  dataValFile: /gpfswork/rech/rin/utf14pr/dataset/AHN/DS_4Classes_Divided2_forRF/Val/ #/share/projects/deep3dt/datasets/AHN/DS_4Classes_new_Divided/Val/ #
+  dataTestFile: /share/projects/deep3dt/datasets/AHN/CleanManually/ #37EN1_08_full/ #CleanManually/ #/share/projects/deep3dt/datasets/AHN/DS_4Classes_new_Divided/Test/ #
   dataroot: data
-  preprocessed_dir: /gpfswork/rech/rin/utf14pr/dev/torch-points3d/data/${data.dataset_name}/
+  preprocessed_dir: /share/home/degelis/dev/torch-points3d/data/${data.dataset_name}/
   first_subsampling: 0.5  # Grid size of the input data
   use_category: False # Use object category information
-  radius: 25
+  radius: 20
   sample_per_epoch: 6000
   dcva_binary_GT: False
   fix_cyl: False # Fix cylinder a special seed and do not apply DA --> for transfer learning tests
